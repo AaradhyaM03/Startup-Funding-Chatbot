@@ -7,41 +7,33 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #0e1117;
       color: white;
     }
-    .bot-container {
-      height: 100vh;
-      width: 100vw;
-    }
     h1, p {
       text-align: center;
       padding: 20px;
+    }
+    #webchat-container {
+      height: 85vh;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <h1>🚀 Startup Funding Chatbot</h1>
   <p>Ask me about startup schemes, incubators, or how to apply for support in India!</p>
+  <div id="webchat-container"></div>
 
-  <!-- Embed container -->
-  <div class="bot-container" id="webchat-container"></div>
-
-  <!-- Botpress Webchat Embed Script -->
   <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
   <script>
     window.botpressWebChat.init({
       configUrl: "https://files.bpcontent.cloud/2025/05/19/09/20250519092631-6SBXLEUA.json",
       container: document.getElementById('webchat-container'),
-      showCloseButton: false,
-      extraStylesheet: "",
-      stylesheet: "",
-      hideWidget: true,
-      layout: "embedded"
+      layout: "embedded",
+      hideWidget: true
     });
   </script>
 </body>
 </html>
-
